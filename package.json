@@ -1,0 +1,26 @@
+{
+  "name": "google-ads-mcp",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Self-hosted MCP server for the Google Ads API (REST). Unlimited accounts under one MCC.",
+  "bin": {
+    "google-ads-mcp": "src/index.js",
+    "google-ads-oauth": "bin/oauth.js"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "oauth": "node bin/oauth.js",
+    "doctor": "node bin/doctor.js",
+    "test": "node test/smoke.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  },
+  "overrides": {
+    "@hono/node-server": "^2.0.5"
+  }
+}
